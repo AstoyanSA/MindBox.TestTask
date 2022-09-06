@@ -8,7 +8,6 @@ namespace MindBox.TestTask
 {
     public class Circle : BaseFigure
     {
-        private double square;
         private readonly double _radius;
 
         public override double Square
@@ -22,14 +21,14 @@ namespace MindBox.TestTask
         public Circle(double radius)
         {
             if (radius < 0) 
-                throw new ArgumentOutOfRangeException(nameof(radius));
+                throw new ArgumentOutOfRangeException($"Radius in less than 0");
 
             _radius = radius;
         }
 
         internal override double GetSquare()
         {
-            return square = Math.PI * Math.Sqrt(_radius);
+            return Math.PI * Math.Sqrt(_radius);
         }
     }
 }
