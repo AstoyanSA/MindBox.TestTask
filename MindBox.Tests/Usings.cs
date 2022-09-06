@@ -1,2 +1,2 @@
 global using Xunit;
-global using MindBox.TestTask;
+global using MindBox.TestTask.Figures;

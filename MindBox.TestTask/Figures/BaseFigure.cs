@@ -1,4 +1,4 @@
-﻿namespace MindBox.TestTask;
+﻿namespace MindBox.TestTask.Figures;
 
 public abstract class BaseFigure
 {
