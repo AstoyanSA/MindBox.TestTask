@@ -19,22 +19,22 @@ CREATE TABLE ProductCategories (
 );
 
 INSERT INTO Products VALUES ('apple'),
-							('banana'),
-							('orange'),
-							('limon'),
-							('grape')
+			    ('banana'),
+			    ('orange'),
+			    ('limon'),
+			    ('grape')
 
 INSERT INTO Categories VALUES ('red'),
-							  ('green'),
-							  ('yellow'),
-							  ('purple')
+			      ('green'),
+			      ('yellow'),
+			      ('purple')
 
 INSERT INTO ProductCategories VALUES (1, 1),
-									 (1, 2),
-									 (1, 3),
-									 (4, 3),
-									 (5, 2),
-									 (5, 4)
+				     (1, 2),
+				     (1, 3),
+				     (4, 3),
+				     (5, 2),
+				     (5, 4)
 
 SELECT Products.ProductName, Categories.CategoryName
 FROM Products
