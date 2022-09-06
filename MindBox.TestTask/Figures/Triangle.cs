@@ -9,7 +9,7 @@ public class Triangle : BaseFigure
 
     public Triangle(List<double> sides)
     {
-        if (sides.Count() != 3)
+        if (sides.Count != 3)
             throw INCORRECT_COUNT;
 
         if (sides[0] < 0)
