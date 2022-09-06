@@ -1,34 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MindBox.TestTask;
 
-namespace MindBox.TestTask
+public class Circle : BaseFigure
 {
-    public class Circle : BaseFigure
+    private readonly double _radius;
+
+    public override double Square
     {
-        private readonly double _radius;
-
-        public override double Square
+        get
         {
-            get
-            {
-                return GetSquare();
-            }
+            return GetSquare();
         }
+    }
 
-        public Circle(double radius)
-        {
-            if (radius < 0) 
-                throw new ArgumentOutOfRangeException($"Radius in less than 0");
+    public Circle(double radius)
+    {
+        if (radius < 0) 
+            throw new ArgumentOutOfRangeException($"Radius in less than 0");
 
-            _radius = radius;
-        }
+        _radius = radius;
+    }
 
-        internal override double GetSquare()
-        {
-            return Math.PI * Math.Sqrt(_radius);
-        }
+    internal override double GetSquare()
+    {
+        return CircleSquareCalculator.CalculateSquare(_radius);
     }
 }
